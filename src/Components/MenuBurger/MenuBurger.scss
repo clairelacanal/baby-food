@@ -38,24 +38,25 @@
     }
   
     .menu-items {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      list-style: none;
-      background: #eee;
-      width: 100%;
-      height: 100vh;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transition: transform 0.3s ease-in-out;
-      transform: translateX(-100%);
-      padding: 2rem;
-
-      &.open {
-        transform: translateX(0);
-      }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        background: #eee;
+        width: 70%;
+        max-width: 400px;
+        height: 100vh;
+        position: fixed; // Passer de 'absolute' à 'fixed' pour prendre tout l'écran
+        top: 0;
+        right: 0;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%); // change -100% à 100%
+        padding: 2rem;
+      
+        &.open {
+          transform: translateX(0); // reste le même
+        }
   
       li {
         padding: 1rem 0;
