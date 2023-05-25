@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MenuBurger from './MenuBurger.scss';
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
