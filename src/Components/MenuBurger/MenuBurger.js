@@ -16,7 +16,7 @@ const BurgerMenu = () => {
         <div className="bar"></div>
       </div>
       {isOpen && (
-        <ul className="menu-items">
+        <ul className={`menu-items ${isOpen ? 'open' : ''}`}>
           <li>
             <a href="/petits-pots">Recettes petits pots</a>
           </li>
