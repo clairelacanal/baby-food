@@ -1,0 +1,45 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    padding: 20px;
+}
+
+// Style par défaut pour les mobiles
+.menu {
+    display: flex;
+    flex-direction: column;
+
+    .menu-item {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+// Media query pour les tablettes et les ordinateurs
+@media (min-width: 768px) {
+    .menu {
+        flex-direction: row;
+        justify-content: space-between;
+
+        .menu-item {
+            border-bottom: none;
+            padding: 10px 20px;
+        }
+    }
+}
+
+// Media query pour les grands écrans
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+        margin: auto;
+    }
+
+    .menu .menu-item {
+        padding: 10px 30px;
+    }
+}

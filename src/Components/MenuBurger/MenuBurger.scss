@@ -1,26 +1,30 @@
 .burger-menu {
+    display: flex;
+    justify-content: flex-end;
+
     .burger-icon {
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      width: 2rem;
-      height: 2rem;
-      background: transparent;
-      border: none;
-      padding: 0;
-      z-index: 10;
-  
-      .bar {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
         width: 2rem;
-        height: 0.25rem;
-        background-color: #333;
-        transition: all 0.3s linear;
-        position: relative;
-        transform-origin: 1px;
-      }
+        height: 2rem;
+        background: transparent;
+        border: none;
+        padding: 0;
+        z-index: 10;
+
+        .bar {
+            width: 2rem;
+            height: 0.25rem;
+            background-color: #333;
+            transition: all 0.3s linear;
+            position: relative;
+            transform-origin: 1px;
+        }
     }
-  
+}
+
     .burger-icon.open {
       .bar:nth-child(1) {
         transform: rotate(45deg);
@@ -71,5 +75,5 @@
         }
       }
     }
-  }
+
   
