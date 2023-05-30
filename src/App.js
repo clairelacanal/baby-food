@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import CreateAccountForm from './Components/Auth/Signup/Signup';
+import LoginForm from './Components/Auth/Login/Login';
 import BurgerMenu from './Components/MenuBurger/MenuBurger';
 import Navbar from './Components/Navbar/Navbar';
 import CardPots from './Components/Recettes/Components/CartesPots/CartesPots';
@@ -29,7 +30,6 @@ function App() {
     <div className="App">
       {windowWidth > 768 ? <Navbar /> : <BurgerMenu />}
       {showLoginForm ? <LoginForm /> : <CreateAccountForm/>}
-      <CreateAccountForm/>
       <CardPots/>
       <CardDme/>
       <Accessories/>

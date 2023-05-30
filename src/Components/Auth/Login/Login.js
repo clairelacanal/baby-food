@@ -6,7 +6,7 @@ const LoginForm = () => {
     password: '',
   });
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
@@ -60,6 +60,7 @@ const LoginForm = () => {
         </div>
         <button type="submit">Log In</button>
       </form>
+      <p>{`Vous n'avez pas encore de compte ? Inscrivez-vous`}</p> 
     </div>
   );
 };
