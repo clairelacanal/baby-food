@@ -11,6 +11,11 @@ import Footer from './Components/Footer/Footer';
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [showLoginForm, setShowLoginForm] = useState(false);
+
+  const handleShowLoginForm = () => {
+    setShowLoginForm(true);
+  };
 
   useEffect(() => {
     const handleWindowResize = () => setWindowWidth(window.innerWidth);
@@ -23,6 +28,7 @@ function App() {
   return (
     <div className="App">
       {windowWidth > 768 ? <Navbar /> : <BurgerMenu />}
+      {showLoginForm ? <LoginForm /> : <CreateAccountForm/>}
       <CreateAccountForm/>
       <CardPots/>
       <CardDme/>
