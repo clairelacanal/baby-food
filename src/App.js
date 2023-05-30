@@ -1,6 +1,5 @@
-
+import React, { useState, useEffect } from 'react';
 import './App.css';
-import React from 'react';
 import CreateAccountForm from './Components/Auth/Signup/Signup';
 import BurgerMenu from './Components/MenuBurger/MenuBurger';
 import Navbar from './Components/Navbar/Navbar';
@@ -11,10 +10,19 @@ import FruitsVegetables from './Components/Accessoires/FruitsLegumesSaison/Fruit
 import Footer from './Components/Footer/Footer';
 
 function App() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleWindowResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowResize);
+
+    // Clean up this component by removing the event listener when the component unmounts
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+
   return (
     <div className="App">
-      <BurgerMenu/>
-      <Navbar/>
+      {windowWidth > 768 ? <Navbar /> : <BurgerMenu />}
       <CreateAccountForm/>
       <CardPots/>
       <CardDme/>
@@ -26,3 +34,4 @@ function App() {
 }
 
 export default App;
+
