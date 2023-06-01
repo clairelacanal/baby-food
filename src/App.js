@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import CreateAccountForm from './Components/Auth/Signup/Signup';
 import LoginForm from './Components/Auth/Login/Login';
@@ -30,17 +30,19 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
-        {windowWidth > 768 ? <Navbar /> : <BurgerMenu />}
-        {showLoginForm ? <LoginForm /> : <CreateAccountForm/>}
-        <CardPots/>
-        <CardDme/>
-        <Accessories/>
-        <FruitsVegetables/>
-        <Link to="/creation-du-compte"><LargeButton/></Link>
-        <Footer/>
-        <Route path='/creation-du-compte'component={CreateAccountForm}/>
-      </div>
+        <div className="App">
+          {windowWidth > 768 ? <Navbar /> : <BurgerMenu />}
+          {showLoginForm ? <LoginForm /> : <CreateAccountForm/>}
+          <CardPots/>
+          <CardDme/>
+          <Accessories/>
+          <FruitsVegetables/>
+          <Link to="/creation-du-compte"><LargeButton/></Link>
+          <Footer/>
+        </div>
+        <Routes>
+          <Route path="/creation-du-compte" component={CreateAccountForm}/>
+        </Routes>
     </Router>
   );
 }
