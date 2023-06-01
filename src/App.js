@@ -8,7 +8,7 @@ import CardPots from './Components/Recettes/Components/CartesPots/CartesPots';
 import CardDme from './Components/Recettes/Components/CartesDME/CartesDme';
 import Accessories from './Components/Accessoires/Accessoires';
 import FruitsVegetables from './Components/Accessoires/FruitsLegumesSaison/FruitsLegumesSaison';
-import LargeButton from '../Buttons/Button';
+import LargeButton from './Components/Buttons/Button';
 import Footer from './Components/Footer/Footer';
 
 function App() {
