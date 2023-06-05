@@ -1,6 +1,11 @@
 import React from 'react';
-import BurgerMenu from './Components/MenuBurger/MenuBurger';
-import Navbar from './Components/Navbar/Navbar';
+import BurgerMenu from '../MenuBurger/MenuBurger';
+import Navbar from '../Navbar/Navbar';
+import CardDme from '../Recettes/Components/CartesDME/CartesDme';
+import CardPots from '../Recettes/Components/CartesPots/CartesPots';
+import FruitsVegetables from '../Accessoires/FruitsLegumesSaison/FruitsLegumesSaison';
+import Accessories from '../Accessoires/Accessoires';
+import Footer from '../Footer/Footer';
 
 const Accueil = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -17,8 +22,13 @@ const Accueil = () => {
   return (
     <div>
         {windowWidth > 768 ? <Navbar /> : <BurgerMenu />}
-      <h1>Bienvenue sur notre site!</h1>
-      <p>Ceci est la page d'accueil.</p>
+        <h1>Bienvenue sur notre site!</h1>
+        <p>Ceci est la page d&apos;accueil.</p>
+        <CardPots/>
+        <CardDme/>
+        <FruitsVegetables/>
+        <Accessories/>
+        <Footer/>
     </div>
   );
 };
