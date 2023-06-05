@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Accueil from './Components/Accueil/Accueil';
-import CreateAccountForm from './Components/Auth/Signup/Signup';
 import LargeButton from './Components/Buttons/Button';
+import CreateAccountForm from './Components/Auth/Signup/Signup';
+
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           <Link to="/creation-du-compte"><LargeButton/></Link>
         </div>
         <Routes>
-          <Route path="/Accueil" element={<Accueil/>}/>
+          <Route path="/" element={<Accueil/>}/>
           <Route path="/creation-du-compte" element={<CreateAccountForm/>}/>
         </Routes>
     </Router>

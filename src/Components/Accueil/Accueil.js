@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import BurgerMenu from '../MenuBurger/MenuBurger';
 import Navbar from '../Navbar/Navbar';
 import CardDme from '../Recettes/Components/CartesDME/CartesDme';
 import CardPots from '../Recettes/Components/CartesPots/CartesPots';
 import FruitsVegetables from '../Accessoires/FruitsLegumesSaison/FruitsLegumesSaison';
 import Accessories from '../Accessoires/Accessoires';
+import LargeButton from '../Buttons/Button';
 import Footer from '../Footer/Footer';
 
 const Accueil = () => {
@@ -20,17 +21,16 @@ const Accueil = () => {
   []);
 
   return (
-    <div>
-        {windowWidth > 768 ? <Navbar /> : <BurgerMenu />}
-        <h1>Bienvenue sur notre site!</h1>
-        <p>Ceci est la page d&apos;accueil.</p>
-        <CardPots/>
-        <CardDme/>
-        <FruitsVegetables/>
-        <Accessories/>
-        <Footer/>
-    </div>
+        <div>
+            {windowWidth > 768 ? <Navbar /> : <BurgerMenu />}
+            <CardPots/>
+            <CardDme/>
+            <FruitsVegetables/>
+            <Accessories/>
+            <Footer/>
+        </div> 
   );
 };
 
 export default Accueil;
+
