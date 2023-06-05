@@ -5,7 +5,6 @@ import CardDme from '../Recettes/Components/CartesDME/CartesDme';
 import CardPots from '../Recettes/Components/CartesPots/CartesPots';
 import FruitsVegetables from '../Accessoires/FruitsLegumesSaison/FruitsLegumesSaison';
 import Accessories from '../Accessoires/Accessoires';
-import LargeButton from '../Buttons/Button';
 import Footer from '../Footer/Footer';
 
 const Accueil = () => {

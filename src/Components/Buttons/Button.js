@@ -4,7 +4,7 @@ import './Button.scss';
 function LargeButton() {
   return (
     <button type="button" className="btn btn-primary btn-lg">
-      Large button
+      Connexion
     </button>
   );
 }
