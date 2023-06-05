@@ -61,8 +61,10 @@ const LoginForm = () => {
         </div>
         <button type="submit">Log In</button>
       </form>
-      {`Vous n'avez pas encore de compte ? `}
-      <Link to="/creation-du-compte">Inscrivez-vous</Link> 
+      <p>
+        {`Vous n'avez pas encore de compte ? `}
+        <Link to="/creation-du-compte">Inscrivez-vous</Link> 
+      </p>
     </div>
   );
 };

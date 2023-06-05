@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom';
+
 
 const CreateAccountForm = () => {
   // Créer un état local pour stocker les valeurs des champs de formulaire
@@ -86,7 +88,10 @@ const CreateAccountForm = () => {
         </div>
       <button type="submit">Créer mon compte</button>
     </form>
-    <p> Vous avez déjà un compte ? Connectez-vous</p>
+    <p>
+      {`Vous avez déjà un compte ? `}
+      <Link to="/connexion">Connectez-vous</Link> 
+    </p>
     </div>
    );
 };
