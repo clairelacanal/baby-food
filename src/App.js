@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Accueil from './Components/Accueil/Accueil';
@@ -8,10 +8,15 @@ import CreateAccountForm from './Components/Auth/Signup/Signup';
 
 
 function App() {
+  const [buttonClicked, setButtonClicked] = useState(false);
+
+  const handleClick = () => {
+    setButtonClicked(true);
+  };
   return (
     <Router>
         <div className="App">
-          <Link to="/connexion"><LargeButton/></Link>
+          {!buttonClicked && <Link to="/connexion" onClick={handleClick}><LargeButton/></Link>}
         </div>
         <Routes>
           <Route path="/" element={<Accueil/>}/>
