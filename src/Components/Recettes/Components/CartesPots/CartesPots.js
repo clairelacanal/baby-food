@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
+import recette1 from '../../../../Images/recipebaby-1.jpg';
 
 import React from 'react';
 
@@ -7,8 +8,8 @@ const CardPots = () => {
   return (
     <div>
     <h6>Les nouvelles recettes de petits pots</h6>
-     <div className="card" style={{ width: '18rem' }}>
-       <img src="..." className="card-img-top" alt="..." />
+     <div className="card" style={{ width: '12rem' }}>
+       <img src={recette1} className="card-img-top" alt="..." />
        <div className="card-body">
          <h5 className="card-title">Card title</h5>
          <p className="card-text">
