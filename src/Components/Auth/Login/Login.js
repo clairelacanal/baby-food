@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios'; // N'oubliez pas d'importer axios
+import { UserContext } from '../../../App'; 
 
 const LoginForm = () => {
+
   const [formData, setFormData] = useState({
     email: '',
     password: '',
   });
+
+  // Récupérez setIsUserLoggedIn du contexte
+  const { setIsUserLoggedIn } = useContext(UserContext);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -14,6 +20,12 @@ const LoginForm = () => {
         // Appel à l'API backend pour vérifier l'identifiant de l'utilisateur
         const response = await axios.post('http://your-api-url.com/login', formData);
         console.log(response.data); // Résultat de la requête backend
+
+        // Si la réponse indique un succès, alors mettre à jour l'état de connexion
+        if (response.status === 200) {
+          setIsUserLoggedIn(true);
+        }
+
       } catch (error) {
         console.error(error);
       }
