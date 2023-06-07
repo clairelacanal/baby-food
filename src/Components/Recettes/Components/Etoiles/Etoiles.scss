@@ -1,0 +1,23 @@
+.star-rating {
+    display: flex;
+    justify-content: left;
+    margin: 20px;
+  
+    label {
+      cursor: pointer;
+  
+      input {
+        display: none;
+      }
+  
+      i {
+        font-size: 18px;
+        transition: color 0.3s ease;
+  
+        &:hover {
+          color: #ffc107;
+        }
+      }
+    }
+  }
+  

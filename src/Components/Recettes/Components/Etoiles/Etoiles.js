@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Etoiles.scss';
 import '@fortawesome/fontawesome-free/css/all.css';
 
 
@@ -7,7 +8,7 @@ const StarRating = () => {
   const [hover, setHover] = useState(0);
 
   return (
-    <div>
+    <div className="star-rating">
       {[...Array(5)].map((star, i) => {
         const ratingValue = i + 1;
         
