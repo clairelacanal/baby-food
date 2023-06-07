@@ -5,6 +5,9 @@ import recette1 from '../../../../Images/recipebaby-1.jpg';
 import React from 'react';
 import StarRating from '../Etoiles/Etoiles';
 
+
+
+
 const CardPots = () => {
   return (
     <div className="card-container">

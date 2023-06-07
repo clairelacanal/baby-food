@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import '@fortawesome/fontawesome-free/css/all.css';
+
 
 const StarRating = () => {
   const [rating, setRating] = useState(0);
@@ -16,6 +18,7 @@ const StarRating = () => {
               name="rating"
               value={ratingValue}
               onClick={() => setRating(ratingValue)}
+              style={{ display: 'none' }}
             />
             <i
               className="fas fa-star"
