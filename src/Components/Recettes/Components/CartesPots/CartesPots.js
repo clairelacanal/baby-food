@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
-import './CardPots.scss';
+import './CartesPots.scss';
 import recette1 from '../../../../Images/recipebaby-1.jpg';
 import React from 'react';
 
@@ -25,4 +25,5 @@ const CardPots = () => {
 };
 
 export default CardPots;
+
 
