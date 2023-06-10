@@ -1,0 +1,30 @@
+.card-container {
+    margin: 20px;
+    padding: 20px;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    .card {
+      width: 13rem;
+
+  
+      .card-body {
+        background-color: #F8EDEB;
+        opacity: 0.9;
+        .card-title {
+          font-size: 18px;
+          color: #333;
+        }
+
+  
+        .btn-primary {
+          background-color: #f1c40f;
+          border-color: #f1c40f;
+        }
+      }
+    }
+  }
