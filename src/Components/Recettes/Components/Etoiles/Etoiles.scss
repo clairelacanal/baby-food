@@ -1,7 +1,9 @@
 .star-rating {
     display: flex;
-    justify-content: left;
-    margin: 20px;
+    justify-content: flex-start;
+    margin: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
   
     label {
       cursor: pointer;
@@ -20,4 +22,5 @@
       }
     }
   }
+
   

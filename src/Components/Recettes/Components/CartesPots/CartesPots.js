@@ -11,7 +11,7 @@ import StarRating from '../Etoiles/Etoiles';
 const CardPots = () => {
   return (
     <div className="card-container">
-      <h6>Dernières recettes de petits pots</h6>
+      <h6>Dernières créations culinaires pour bébés</h6>
       <div className="card">
         <img src={recette1} className="card-img-top" alt="..." />
         <div className="card-body">
