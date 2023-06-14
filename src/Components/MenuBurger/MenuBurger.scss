@@ -1,6 +1,8 @@
 .burger-menu {
     display: flex;
     justify-content: flex-end;
+    position: relative; /* ou 'absolute', 'fixed', ou 'sticky' */
+    z-index: 1000; 
 
     .burger-icon {
         cursor: pointer;
