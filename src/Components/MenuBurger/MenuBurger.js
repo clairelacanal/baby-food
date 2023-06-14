@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import MenuBurger from './MenuBurger.scss';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
+
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +33,7 @@ const BurgerMenu = () => {
             <a href="/accessoires">Accessoires de cuisine</a>
           </li>
           <li>
-            <a href="/mon-compte">Mon compte</a>
+            <a href="/mon-compte"><FontAwesomeIcon icon={faUserCircle}/></a>
           </li>
           <li>
             <a href="/deconnexion">Déconnexion</a>
