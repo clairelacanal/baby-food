@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import MenuBurger from './MenuBurger.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { faCarrot } from '@fortawesome/free-solid-svg-icons';
+import { faKitchenSet } from '@fortawesome/free-solid-svg-icons';
+import { faBowlFood } from '@fortawesome/free-solid-svg-icons';
+import { faHand } from '@fortawesome/free-solid-svg-icons';
 
 
 const BurgerMenu = () => {
@@ -21,22 +26,22 @@ const BurgerMenu = () => {
       {isOpen && (
         <ul className={`menu-items ${isOpen ? 'open' : ''}`}>
           <li>
-            <a href="/petits-pots">Recettes petits pots</a>
+            <a href="/petits-pots"><FontAwesomeIcon icon={faBowlFood}/>Recettes petits pots</a>
           </li>
           <li>
-            <a href="/dme">Recettes DME</a>
+            <a href="/dme"><FontAwesomeIcon icon={faHand}/>Recettes DME</a>
           </li>
           <li>
-            <a href="/legumes-fruits">Légumes et fruits de saison</a>
+            <a href="/legumes-fruits"><FontAwesomeIcon icon={faCarrot}/>Légumes et fruits de saison</a>
           </li>
           <li>
-            <a href="/accessoires">Accessoires de cuisine</a>
+            <a href="/accessoires"><FontAwesomeIcon icon={faKitchenSet}/>Accessoires de cuisine</a>
           </li>
           <li>
-            <a href="/mon-compte"><FontAwesomeIcon icon={faUserCircle}/></a>
+            <a href="/mon-compte"><FontAwesomeIcon icon={faUserCircle}/>Mon compte</a>
           </li>
           <li>
-            <a href="/deconnexion">Déconnexion</a>
+            <a href="/deconnexion"><FontAwesomeIcon icon={faTrashCan}/>Déconnexion</a>
           </li>
         </ul>
       )}
