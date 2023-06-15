@@ -19,7 +19,7 @@
         .bar {
             width: 2rem;
             height: 0.25rem;
-            background-color: #333;
+            background-color: #FAEDCD;
             transition: all 0.3s linear;
             position: relative;
             transform-origin: 1px;
@@ -47,9 +47,9 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         list-style: none;
-        background: #eee;
+        background: #FAEDCD;
         width: 70%;
         max-width: 400px;
         height: 100vh;
@@ -66,10 +66,18 @@
   
       li {
         padding: 1rem 0;
+        .icon {
+          margin-right: 10px; // Ajustez cette valeur en fonction de vos besoins
+        }
+
+        .red-light {
+          color: red;
+        }
+        
         a {
           color: #333;
           text-decoration: none;
-          font-size: 1.5rem;
+          font-size: 16px;
           transition: color 0.3s linear;
           &:hover {
             color: #888;

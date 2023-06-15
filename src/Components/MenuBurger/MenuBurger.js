@@ -26,22 +26,22 @@ const BurgerMenu = () => {
       {isOpen && (
         <ul className={`menu-items ${isOpen ? 'open' : ''}`}>
           <li>
-            <a href="/petits-pots"><FontAwesomeIcon icon={faBowlFood}/>Recettes petits pots</a>
+            <a href="/petits-pots"><FontAwesomeIcon className='icon' icon={faBowlFood}/>Recettes petits pots</a>
           </li>
           <li>
-            <a href="/dme"><FontAwesomeIcon icon={faHand}/>Recettes DME</a>
+            <a href="/dme"><FontAwesomeIcon className='icon' icon={faHand}/>Recettes DME</a>
           </li>
           <li>
-            <a href="/legumes-fruits"><FontAwesomeIcon icon={faCarrot}/>Légumes et fruits de saison</a>
+            <a href="/legumes-fruits"><FontAwesomeIcon className='icon' icon={faCarrot}/>Légumes et fruits de saison</a>
           </li>
           <li>
-            <a href="/accessoires"><FontAwesomeIcon icon={faKitchenSet}/>Accessoires de cuisine</a>
+            <a href="/accessoires"><FontAwesomeIcon className='icon' icon={faKitchenSet}/>Accessoires de cuisine</a>
           </li>
           <li>
-            <a href="/mon-compte"><FontAwesomeIcon icon={faUserCircle}/>Mon compte</a>
+            <a href="/mon-compte"><FontAwesomeIcon className='icon' icon={faUserCircle}/>Mon compte</a>
           </li>
           <li>
-            <a href="/deconnexion"><FontAwesomeIcon icon={faTrashCan}/>Déconnexion</a>
+            <a href="/deconnexion" className='red-light'><FontAwesomeIcon className='icon' icon={faTrashCan}/>Déconnexion</a>
           </li>
         </ul>
       )}
