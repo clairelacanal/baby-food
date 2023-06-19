@@ -3,11 +3,12 @@ import './Button.scss';
 
 function LargeButton() {
   return (
-    <div className="large-button">
+    <button className="large-button">
       <p>Connexion</p>
-    </div>
+    </button>
   );
 }
 
 export default LargeButton;
+
 

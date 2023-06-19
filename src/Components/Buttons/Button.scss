@@ -1,10 +1,23 @@
-$color-ocean: #416dea;
-$borderRadius: 36px;
-$font-face: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-
 .large-button {
-  color: $color-ocean;
-  border-radius: $borderRadius;
-  font-family: $font-face;
+  display: inline-block;
+  width: 10em;
+  height: 3em;
+  background-color: #FFB5A7; /* Changez cela en fonction de votre palette de couleurs */
+  color: #343a40;/* Changez cela en fonction de votre palette de couleurs */
+  font-weight:700;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
+
+.large-button:hover {
+  background-color: #4CAF50; /* Changer cela en fonction de votre palette de couleurs */
+  color: white;
+}
+
   

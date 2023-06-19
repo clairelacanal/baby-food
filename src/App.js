@@ -16,13 +16,13 @@ function App() {
     <Router>
       <UserContext.Provider value={{ isUserLoggedIn, setIsUserLoggedIn }}>
         <div className="App">
+          <Routes>
+            <Route path="/" element={<Accueil/>}/>
+            <Route path="/connexion" element={<LoginForm/>}/>
+            <Route path="/creation-du-compte" element={<CreateAccountForm/>}/>
+          </Routes>
           {!isUserLoggedIn && <Link to="/connexion"><LargeButton/></Link>}
         </div>
-        <Routes>
-          <Route path="/" element={<Accueil/>}/>
-          <Route path="/connexion" element={<LoginForm/>}/>
-          <Route path="/creation-du-compte" element={<CreateAccountForm/>}/>
-        </Routes>
       </UserContext.Provider>
     </Router>
   );
