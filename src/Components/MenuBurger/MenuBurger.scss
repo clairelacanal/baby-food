@@ -58,7 +58,7 @@
         right: 0;
         transition: transform 0.3s ease-in-out;
         transform: translateX(100%); // change -100% à 100%
-        padding: 2rem;
+        padding: 0rem;
       
         &.open {
           transform: translateX(0); // reste le même
@@ -66,14 +66,15 @@
       
         hr {
           border: none;
-          border-top: 1px solid #333;
+          border-top: 4px solid #F8EDEB;
+          width: 100vw;
           margin: 0;
         }
   
       li {
         padding: 0.8rem;
         .icon {
-          margin-right: 10px;
+          margin-right: 7px;
           color: #343a40;
           font-size: 18px;
         }

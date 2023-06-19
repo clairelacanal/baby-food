@@ -27,24 +27,24 @@ const BurgerMenu = () => {
         <ul className={`menu-items ${isOpen ? 'open' : ''}`}>
           <li>
             <a href="/petits-pots"><FontAwesomeIcon className='icon' icon={faBowlFood}/>Recettes petits pots</a>
+            <hr/>
           </li>
-          <hr/>
           <li>
             <a href="/dme"><FontAwesomeIcon className='icon' icon={faHand}/>Recettes DME</a>
+            <hr/>
           </li>
-          <hr/>
           <li>
             <a href="/legumes-fruits"><FontAwesomeIcon className='icon' icon={faCarrot}/>Légumes et fruits de saison</a>
+            <hr/>
           </li>
-          <hr/>
           <li>
             <a href="/accessoires"><FontAwesomeIcon className='icon' icon={faKitchenSet}/>Accessoires de cuisine</a>
+            <hr/>
           </li>
-          <hr/>
           <li>
             <a href="/mon-compte"><FontAwesomeIcon className='icon' icon={faUserCircle}/>Mon compte</a>
+            <hr/>
           </li>
-          <hr/>
           <li>
             <a href="/deconnexion" className='red-light'><FontAwesomeIcon id ="red-icon" className='icon' icon={faTrashCan}/>Déconnexion</a>
           </li>
