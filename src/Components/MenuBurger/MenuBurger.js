@@ -28,20 +28,25 @@ const BurgerMenu = () => {
           <li>
             <a href="/petits-pots"><FontAwesomeIcon className='icon' icon={faBowlFood}/>Recettes petits pots</a>
           </li>
+          <hr/>
           <li>
             <a href="/dme"><FontAwesomeIcon className='icon' icon={faHand}/>Recettes DME</a>
           </li>
+          <hr/>
           <li>
             <a href="/legumes-fruits"><FontAwesomeIcon className='icon' icon={faCarrot}/>Légumes et fruits de saison</a>
           </li>
+          <hr/>
           <li>
             <a href="/accessoires"><FontAwesomeIcon className='icon' icon={faKitchenSet}/>Accessoires de cuisine</a>
           </li>
+          <hr/>
           <li>
             <a href="/mon-compte"><FontAwesomeIcon className='icon' icon={faUserCircle}/>Mon compte</a>
           </li>
+          <hr/>
           <li>
-            <a href="/deconnexion" className='red-light'><FontAwesomeIcon className='icon' icon={faTrashCan}/>Déconnexion</a>
+            <a href="/deconnexion" className='red-light'><FontAwesomeIcon id ="red-icon" className='icon' icon={faTrashCan}/>Déconnexion</a>
           </li>
         </ul>
       )}

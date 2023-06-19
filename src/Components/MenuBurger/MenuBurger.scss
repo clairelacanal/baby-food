@@ -49,7 +49,7 @@
         justify-content: center;
         align-items: flex-start;
         list-style: none;
-        background: #FAEDCD;
+        background: #FEC89A;
         width: 70%;
         max-width: 400px;
         height: 100vh;
@@ -63,27 +63,42 @@
         &.open {
           transform: translateX(0); // reste le même
         }
+      
+        hr {
+          border: none;
+          border-top: 1px solid #333;
+          margin: 0;
+        }
   
       li {
-        padding: 1rem 0;
+        padding: 0.8rem;
         .icon {
-          margin-right: 10px; // Ajustez cette valeur en fonction de vos besoins
+          margin-right: 10px;
+          color: #343a40;
+          font-size: 18px;
         }
 
         .red-light {
+          color: red;
+        }
+
+        #red-icon {
           color: red;
         }
         
         a {
           color: #333;
           text-decoration: none;
-          font-size: 16px;
+          font-size: 15px;
           transition: color 0.3s linear;
           &:hover {
             color: #888;
           }
         }
       }
+      li:last-child {
+        border-bottom: none;
+    }
     }
 
   
