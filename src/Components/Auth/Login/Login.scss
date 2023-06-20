@@ -43,14 +43,47 @@
         flex-direction: column;
       }
 
-      .check-password {
-        display: flex;
-        align-items: center;
-        
-        input {
-          margin-right: 10px;
+      input[type="checkbox"] {
+        display: none;
+      
+        // Ceci est pour le label
+        & + label {
+          position: relative;
+          padding-left: 30px;
+          cursor: pointer;
+      
+          // Ceci est pour la box de la checkbox
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #000;
+            background: #fff;
+          }
+      
+          // Ceci est pour le checkmark
+          &::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background: #000;
+            transform: scale(0);
+            transition: transform 0.3s ease;
+          }
+        }
+      
+        // Ceci est pour changer l'apparence quand la checkbox est checked
+        &:checked + label::after {
+          transform: scale(1);
         }
       }
+      
       
   
       button {

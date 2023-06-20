@@ -74,12 +74,8 @@ const LoginForm = () => {
         </div>
         <div className='container-password'>
           <div className='check-password'>
-            <input
-              type="checkbox"
-              id="remember-me"
-              name="remember-me"
-            />
-            <label htmlFor="remember-me">Se souvenir de moi</label>
+          <input type="checkbox" id="checkbox" />
+          <label htmlFor="checkbox">Se souvenir de moi</label>
           </div>
           <div className='forgot-password'>
             <Link to="/mot-de-passe-oublie" className="forgot-password">Mot de passe oublié?</Link>
