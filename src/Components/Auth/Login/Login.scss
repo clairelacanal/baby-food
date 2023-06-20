@@ -3,7 +3,7 @@ div {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f2f2f2;
+    background-color: #F8EDEB;
     height: 100%;
   
     form {
@@ -13,6 +13,7 @@ div {
       padding: 2rem;
       border-radius: 0.5rem;
       background-color: white;
+      width: 90%;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   
       h2 {
@@ -30,7 +31,8 @@ div {
   
         input {
           padding: 0.5rem;
-          border-radius: 0.5rem;
+          width: 100%;
+          border-radius: 0.2rem;
           border: 1px solid #ddd;
           font-size: 1rem;
         }
@@ -53,6 +55,8 @@ div {
   
     p {
       text-align: center;
+      font-size: 13px;
+      margin-top: 1em;
   
       a {
         color: #007bff;

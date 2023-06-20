@@ -48,7 +48,7 @@ const LoginForm = () => {
 
   return (
     <div>
-      <h2>Login</h2>
+      <h2>Connexion</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="email">Email:</label>
@@ -62,7 +62,7 @@ const LoginForm = () => {
           />
         </div>
         <div>
-          <label htmlFor="password">Password:</label>
+          <label htmlFor="password">Mot de passe:</label>
           <input
             type="password"
             id="password"
@@ -72,7 +72,20 @@ const LoginForm = () => {
             required
           />
         </div>
-        <button type="submit">Log In</button>
+        <div className='container-password'>
+          <div className='check-password'>
+            <input
+              type="checkbox"
+              id="remember-me"
+              name="remember-me"
+            />
+            <label htmlFor="remember-me">Se souvenir de moi</label>
+          </div>
+          <div className='forgot-password'>
+            <Link to="/mot-de-passe-oublie" className="forgot-password">Mot de passe oublié?</Link>
+          </div>
+        </div>
+        <button type="submit">Me connecter</button>
       </form>
       <p>
         {`Vous n'avez pas encore de compte ? `}
