@@ -1,4 +1,4 @@
-div {
+.login-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,6 +37,21 @@ div {
           font-size: 1rem;
         }
       }
+
+      .container-password {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .check-password {
+        display: flex;
+        align-items: center;
+        
+        input {
+          margin-right: 10px;
+        }
+      }
+      
   
       button {
         padding: 0.75rem;

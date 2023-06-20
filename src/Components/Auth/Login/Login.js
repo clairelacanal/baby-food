@@ -47,7 +47,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div>
+    <div className='login-form'>
       <h2>Connexion</h2>
       <form onSubmit={handleSubmit}>
         <div>
