@@ -76,12 +76,14 @@
             transform: scale(0);
             transition: transform 0.3s ease;
           }
+
         }
       
         // Ceci est pour changer l'apparence quand la checkbox est checked
         &:checked + label::after {
           transform: scale(1);
         }
+
       }
       
       
