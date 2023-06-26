@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import './Login.scss';
 import axios from 'axios'; // N'oubliez pas d'importer axios
 import { UserContext } from '../../../App';
@@ -85,9 +86,14 @@ const LoginForm = () => {
           </div>
         </div>
         <button type="submit">Me connecter</button>
+        <hr className="hr-style" />
+        <p>OU</p>
+        <hr className="hr-style" />
       </form>
-      <hr/>
-      <button className="btn-google">Continuer avec Google</button>
+      <button className="btn-google">
+        <FontAwesomeIcon icon={faGoogle} className="google-icon" />
+        Continuer avec Google
+      </button>
       <button className="btn-facebook">
         <FontAwesomeIcon icon={faFacebook} className="facebook-icon" />
         Continuer avec Facebook

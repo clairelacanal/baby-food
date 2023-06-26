@@ -1,100 +1,77 @@
-import React, { useState, UserContext } from 'react';
-import {Link} from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
+import './Signup.scss';
+import axios from 'axios'; // N'oubliez pas d'importer axios
 
-
-
-const CreateAccountForm = () => {
-  // Créer un état local pour stocker les valeurs des champs de formulaire
+const SignUpForm = () => {
   const [formData, setFormData] = useState({
-    nameUser:'',
     email: '',
     password: '',
+    confirmPassword: '', // champ supplémentaire pour le formulaire d'inscription
   });
 
-  const [rememberMe, setRememberMe] = useState(false);
-
-  // Fonction de gestionnaire de soumission de formulaire
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Envoyer les données de formulaire à l'API backend pour créer un compte utilisateur
-    // Ajouter des validations de formulaire pour éviter les erreurs de saisie
-    // Réinitialiser les champs du formulaire
-    setFormData({
-      nameUser: '',
-      email: '',
-      password: '',
-    });
+    
+    // vérifier si les mots de passe correspondent
+    if (formData.password !== formData.confirmPassword) {
+      alert("Les mots de passe ne correspondent pas.");
+      return;
+    }
+
+    // Vous voudrez probablement faire un POST à une API différente pour l'inscription
+    const response = await axios.post('http://your-api-url.com/signup', formData);
+
+    if (response.status === 200) {
+      console.log("Inscription réussie");
+    }
   };
 
-  // Fonction de gestionnaire de changement de champ
   const handleChange = (event) => {
-    // Mettre à jour l'état local avec la nouvelle valeur du champ de formulaire
     setFormData({
       ...formData,
       [event.target.name]: event.target.value,
     });
   };
 
-  const handleRememberMeChange = (event) => {
-    setRememberMe(event.target.checked);
-  };
-
-
   return (
-    <div>
-    <form onSubmit={handleSubmit}>
-    <h1>Créez votre compte</h1>
-    <div>
-        <label htmlFor="nameUser">Nom:</label>
-        <input
-          type="text"
-          id="nameUser"
-          name="nameUser"
-          value={formData.nameUser}
-          onChange={handleChange}
-          required
-        />
-    </div>
-    <div>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-    </div>
-    <div>
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        />
-    </div>
-    <div>
-          <label>
-            <input
-              type="checkbox"
-              checked={rememberMe}
-              onChange={handleRememberMeChange}
-            />
-            Se souvenir de moi
-          </label>
+    <div className='signup-form'> 
+      <h2>Inscription</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
         </div>
-      <button type="submit">Créer mon compte</button>
-    </form>
-    <p>
-      {`Vous avez déjà un compte ? `}
-      <Link to="/connexion">Connectez-vous</Link> 
-    </p>
+        <div>
+          <label htmlFor="password">Mot de passe:</label>
+          <input type="password" id="password" name="password" value={formData.password} onChange={handleChange} required />
+        </div>
+        <div>
+          <label htmlFor="confirmPassword">Confirmer le mot de passe:</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} required />
+        </div>
+        <button type="submit">{"S'inscrire"}</button>
+        <hr className="hr-style" />
+        <p>OU</p>
+        <hr className="hr-style" />
+      </form>
+      <button className="btn-google">
+        <FontAwesomeIcon icon={faGoogle} className="google-icon" />
+        {"S'inscrire"} avec Google
+      </button>
+      <button className="btn-facebook">
+        <FontAwesomeIcon icon={faFacebook} className="facebook-icon" />
+        {"S'inscrire"} avec Facebook
+      </button>
+      <p>
+        {`Déjà membre ? `}
+        <Link to="/connexion">Se connecter</Link>
+      </p>
     </div>
-   );
+  );
 };
 
-export default CreateAccountForm;
+export default SignUpForm;
