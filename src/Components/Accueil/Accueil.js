@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import BurgerMenu from '../MenuBurger/MenuBurger';
+import Profil from '../Profile/Profil';
 import Navbar from '../Navbar/Navbar';
 import CardDme from '../Recettes/Components/CartesDME/CartesDme';
 import CardPots from '../Recettes/Components/CartesPots/CartesPots';
@@ -22,6 +23,7 @@ const Accueil = () => {
   return (
         <div>
             {windowWidth > 768 ? <Navbar /> : <BurgerMenu />}
+            <Profil/>
             <CardPots/>
             <CardDme/>
             <FruitsVegetables/>
