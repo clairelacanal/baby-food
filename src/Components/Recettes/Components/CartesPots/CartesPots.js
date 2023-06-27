@@ -11,14 +11,14 @@ import StarRating from '../Etoiles/Etoiles';
 const CardPots = () => {
   return (
     <div className="card-container">
-      <h6>Dernières créations culinaires pour bébés</h6>
+      <h2>PETITS POTS</h2>
       <div className="card">
         <img src={recette1} className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">Card title</h5>
           <StarRating/>
           <a href="#" className="btn btn-primary">
-            Go somewhere
+            En savoir +
           </a>
         </div>
       </div>
