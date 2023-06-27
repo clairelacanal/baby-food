@@ -1,13 +1,12 @@
 .container {
-    background-color: greenyellow;
     width: 50%;
 
     ul {
-        background-color: pink;
         width: 90%;
         display: block;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 30px;
 
         .container-avatar {
             display: flex;
@@ -17,12 +16,16 @@
                 flex-direction: column;
 
                 .title {
-                    color: red;
+                    color: #F79D65;
                     margin-left: 1em;
+                    font-weight: bold;
+                    font-size: 16px;
                 }
     
                 .bienvenue {
                     margin-left: 1em;
+                    color: #495057;
+                    font-weight: 600;
                 }
 
             }
@@ -33,11 +36,21 @@
                 height: 60px;
             }
         }
-    
-        .collection-item-avatar li {
-            color: red;
-            margin-left: 5em;
-            padding: 0.3em;
-        }
+
+        
+
+            .icon-avatar {
+                color: #F79D65;
+                font-size: 20px;
+                margin-right: 5px;
+            }
+        
+            .collection-item-avatar li {
+                color: #495057;
+                font-weight: 400;
+                padding: 0.3em;
+                margin-left: 5em;
+            }
+        
     }
 }

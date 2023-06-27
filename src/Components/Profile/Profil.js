@@ -18,9 +18,9 @@ const Profil = () => {
                 </div>
             </div>
             <div className="collection-item-avatar">
-                <li><FontAwesomeIcon icon={faHeart}/>Mes recettes préférées</li>
-                <li><FontAwesomeIcon icon={faUsers}/>Mes recettes partagées</li>
-                <li><FontAwesomeIcon icon={faSpoon}/>Mes aliments testés</li>
+                <li><FontAwesomeIcon icon={faHeart} className="icon-avatar"/>Mes recettes préférées</li>
+                <li><FontAwesomeIcon icon={faUsers} className="icon-avatar"/>Mes recettes partagées</li>
+                <li><FontAwesomeIcon icon={faSpoon} className="icon-avatar"/>Mes aliments testés</li>
             </div>
         </ul>
     </div>
