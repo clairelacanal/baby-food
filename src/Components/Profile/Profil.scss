@@ -1,6 +1,6 @@
 .container {
     background-color: #E9EDC9;
-    margin-top: 20px;
+    margin-top: 40px;
 
     ul {
         width: 90%;
@@ -58,14 +58,12 @@
             }
 
             li {
-                // Autres styles...
-        
-                padding-bottom: 1em; // Cela ajoute de l'espace sous chaque lien
+                padding-bottom: 1em; 
             }
 
             .link-without-style {
                 text-decoration: none;
-                color: inherit;
+                color: #495057;
             }
 
             #recettes-preferees {
