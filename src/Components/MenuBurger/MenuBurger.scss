@@ -100,6 +100,20 @@
       li:last-child {
         border-bottom: none;
     }
+  /* Styles pour tablette 
+@media (min-width: 768px) {
+    form {
+        width: 50%;
     }
+} */
+
+/* Styles pour ordinateur de bureau 
+@media (min-width: 1024px) {
+    form {
+        width: 30%;
+    }
+}*/
+    
+}
 
   
