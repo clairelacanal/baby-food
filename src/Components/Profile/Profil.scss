@@ -38,7 +38,13 @@
             }
         }
 
-        
+        .collection-item-avatar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1em;
+            margin-left: 3em;
 
             .icon-avatar {
                 color: #F79D65;
@@ -49,9 +55,28 @@
             .collection-item-avatar li {
                 color: #495057;
                 font-weight: 400;
-                padding: 0.3em;
-                margin-left: 5em;
             }
+
+            li {
+                // Autres styles...
+        
+                padding-bottom: 1em; // Cela ajoute de l'espace sous chaque lien
+            }
+
+            .link-without-style {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            #recettes-preferees {
+                margin-left: 0.4em;
+            }
+
+            #aliments-testes {
+                margin-right: 1.3em;
+            }
+
+        }       
         
     }
 }
