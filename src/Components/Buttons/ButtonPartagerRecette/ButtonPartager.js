@@ -1,14 +1,18 @@
-import ButtonPartager from './ButtonPartager';
+import React from 'react';
+import './ButtonPartager.scss';
 
-function MaRecette() {
-  const handlePartager = () => {
-    // ajouter la recette à l'état global ici
-  };
 
+
+function ButtonPartager() {
+    const handlePartager = () => {
+        // ajouter la recette à l'état global ici
+      };
   return (
-    <div>
-      {/* autres éléments du composant */}
-      <ButtonPartager onPartager={handlePartager} />
-    </div>
+        <button className="button-partager">
+            {/* autres éléments du composant */}
+            <ButtonPartager onPartager={handlePartager} />
+        </button>
   );
 }
+
+export default ButtonPartager;
