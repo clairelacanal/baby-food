@@ -15,16 +15,17 @@ const SignUpForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    
-    // vérifier si les mots de passe correspondent
+  
     if (formData.password !== formData.confirmPassword) {
-      alert("Les mots de passe ne correspondent pas.");
+      alert('Les mots de passe ne correspondent pas.');
       return;
     }
-
-    // Vous voudrez probablement faire un POST à une API différente pour l'inscription
-    const response = await axios.post('http://your-api-url.com/signup', formData);
-
+  
+    const response = await axios.post('http://your-api-url.com/signup', {
+      email: formData.email,
+      password: formData.password, // Notez qu'on n'envoie pas confirmPassword à l'API
+    });
+  
     if (response.status === 200) {
       console.log("Inscription réussie");
     }

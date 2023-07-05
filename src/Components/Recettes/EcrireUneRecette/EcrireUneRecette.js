@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
 
 class EcrireUneRecette extends Component {
   constructor(props) {
@@ -36,8 +34,6 @@ class EcrireUneRecette extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    // TODO: Ajouter le code pour sauvegarder la recette ici
-    this.props.history.push('/recette-partagee-details/' + idRecette);
   }
 
   render() {
@@ -81,10 +77,5 @@ class EcrireUneRecette extends Component {
   }
 }
 
-EcrireUneRecette.propTypes = {
-    history: PropTypes.shape({
-      push: PropTypes.func.isRequired,
-    }).isRequired,
-  };
 
 export default EcrireUneRecette;

@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import BurgerMenu from '../MenuBurger/MenuBurger';
 import Profil from '../Profile/Profil';
 import ButtonEcrire from '../Buttons/ButtonEcrireRecette/ButtonRecette';
+import CardTypeRecette from '../Recettes/Components/CardTypeRecette/CardTypeRecette';
 import Navbar from '../Navbar/Navbar';
-import CardDme from '../Recettes/Components/CartesDME/CartesDme';
-import CardPots from '../Recettes/Components/CartesPots/CartesPots';
 import FruitsVegetables from '../Accessoires/FruitsLegumesSaison/FruitsLegumesSaison';
 import Accessories from '../Accessoires/Accessoires';
 import Footer from '../Footer/Footer';
@@ -26,8 +25,7 @@ const Accueil = () => {
             {windowWidth > 768 ? <Navbar /> : <BurgerMenu />}
             <Profil/>
             <ButtonEcrire/>
-            <CardPots/>
-            <CardDme/>
+            <CardTypeRecette/>
             <FruitsVegetables/>
             <Accessories/>
             <Footer/>
