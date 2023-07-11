@@ -1,10 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const connectDB = require('./db');
 const authRoutes = require('./routes/authRoutes');
+const connectDB = require('../config/database'); // ajustez le chemin en fonction de l'emplacement de votre fichier database.js
+
 
 const app = express();
+
+// Connect to MongoDB
+connectDB();
 
 app.use(cors());
 app.use(bodyParser.json());
