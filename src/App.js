@@ -6,6 +6,8 @@ import LargeButton from './Components/Buttons/ButtonConnexion/Button';
 import LoginForm from './Components/Auth/Login/Login';
 import CreateAccountForm from './Components/Auth/Signup/Signup';
 import EcrireUneRecette from './Components/Recettes/EcrireUneRecette/EcrireUneRecette';
+import AucuneRecettePreferee from './Components/Recettes/RecettesPreferees/Components/NothingRecipes/Nothing/AucunePref';
+
 
 // Créer un nouveau contexte
 export const UserContext = createContext();
@@ -22,6 +24,7 @@ function App() {
             <Route path="/connexion" element={<LoginForm/>}/>
             <Route path="/creation-du-compte" element={<CreateAccountForm/>}/>
             <Route path="/ecrire-une-recette" element={<EcrireUneRecette/>}/>
+            <Route path="/mes-recettes-preferees" element={<AucuneRecettePreferee/>}/>
           </Routes>
           {!isUserLoggedIn && <Link to="/connexion"><LargeButton/></Link>}
         </div>
