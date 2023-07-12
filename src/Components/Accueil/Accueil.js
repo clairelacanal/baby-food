@@ -25,7 +25,8 @@ const Accueil = () => {
             {windowWidth > 768 ? <Navbar /> : <BurgerMenu />}
             <Profil/>
             <ButtonEcrire/>
-            <CardTypeRecette/>
+            <CardTypeRecette type="DME" />
+            <CardTypeRecette type="PETITS POTS" />
             <FruitsVegetables/>
             <Accessories/>
             <Footer/>
