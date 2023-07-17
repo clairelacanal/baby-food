@@ -1,4 +1,8 @@
+const connectDB = require('../config/database');
 const Recipe = require('../models/Recipe');
+
+
+connectDB();
 
 const newRecipe = new Recipe({
   title: "Ma nouvelle recette",
