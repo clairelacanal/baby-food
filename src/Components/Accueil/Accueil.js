@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import BurgerMenu from '../MenuBurger/MenuBurger';
 import Profil from '../Profile/Profil';
 import ButtonEcrire from '../Buttons/ButtonEcrireRecette/ButtonRecette';
-import CardTypeRecette from '../Recettes/Components/CardTypeRecette/CardTypeRecette';
+import RecipeList from '../Recettes/RecipesList/RecipesList';
 import Navbar from '../Navbar/Navbar';
 import FruitsVegetables from '../Accessoires/FruitsLegumesSaison/FruitsLegumesSaison';
 import Accessories from '../Accessoires/Accessoires';
@@ -25,8 +25,7 @@ const Accueil = () => {
             {windowWidth > 768 ? <Navbar /> : <BurgerMenu />}
             <Profil/>
             <ButtonEcrire/>
-            <CardTypeRecette type="DME" />
-            <CardTypeRecette type="PETITS POTS" />
+            <RecipeList/>
             <FruitsVegetables/>
             <Accessories/>
             <Footer/>

@@ -5,6 +5,7 @@ class EcrireUneRecette extends Component {
     super(props);
     this.state = {
       title: '',
+      isDme: true, // Initialiser isDme dans l'état
       photo: null,
       prepTime: '',
       cookTime: '',
@@ -32,6 +33,12 @@ class EcrireUneRecette extends Component {
     this.setState({ [arrayName]: array });
   }*/
 
+  handleIsDmeChange = (event) => {
+    this.setState({
+      isDme: event.target.value === 'true', // Convertir la valeur du bouton radio en booléen
+    });
+  }
+
   handleSubmit = (event) => {
     event.preventDefault();
   }
@@ -39,6 +46,28 @@ class EcrireUneRecette extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
+      <div>
+        <label>
+          DME:
+          <input 
+            type="radio" 
+            name="isDme" 
+            value="true"
+            checked={this.state.isDme === true}
+            onChange={this.handleIsDmeChange}
+          />
+        </label>
+        <label>
+          PETITS POTS:
+          <input 
+            type="radio" 
+            name="isDme" 
+            value="false"
+            checked={this.state.isDme === false}
+            onChange={this.handleIsDmeChange}
+          />
+        </label>
+        </div>
         <label>
           Proposez un titre:
           <input type="text" name="title" onChange={this.handleInputChange} />

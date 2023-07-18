@@ -8,8 +8,7 @@ import recette2 from '../../../../Images/recipebaby-2.jpg';
 import StarRating from '../Etoiles/Etoiles';
 import { Link } from 'react-router-dom';
 
-const CardTypeRecette = ({ type }) => {
-  const isDme = type === 'DME';
+const CardTypeRecette = ({ isDme }) => {
   return (
     <div className="card-container">
       <h2>{isDme ? 'DME' : 'PETITS POTS'}</h2>
@@ -28,10 +27,11 @@ const CardTypeRecette = ({ type }) => {
 };
 
 CardTypeRecette.propTypes = {
-  type: PropTypes.string.isRequired,
+  isDme: PropTypes.bool.isRequired,
 };
 
 export default CardTypeRecette;
+
 
 
 
