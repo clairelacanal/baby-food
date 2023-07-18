@@ -6,6 +6,7 @@ connectDB();
 
 const newRecipe = new Recipe({
   title: "Ma nouvelle recette",
+  type: true,
   imageUrl: "http://exemple.com/monimage.jpg",
   note: 5,
   tempsPreparation: 30,
