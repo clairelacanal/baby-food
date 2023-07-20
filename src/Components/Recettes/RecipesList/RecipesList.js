@@ -7,7 +7,7 @@ function RecipeList() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
   useEffect(() => {
-    axios.get('/recettes')
+    axios.get('http://localhost:5000/')
       .then(response => {
         console.log(response.data); // ajouter cette ligne
         setRecipes(response.data);
@@ -21,11 +21,11 @@ function RecipeList() {
 
   return (
     <div>
-    <CardTypeRecette isDme={true} />
-    <CardTypeRecette isDme={false} />
+    <CardTypeRecette recipe={true} />
+    <CardTypeRecette recipe={false} />
       
-      {recipes.map(recipe => (
-        <CardTypeRecette key={recipe._id} type={recipe.isDme} onClick={() => handleTitleClick(recipe)} />
+    {recipes.length > 0 && recipes.map(recipe => (
+    <CardTypeRecette key={recipe._id} recipe={recipe} onClick={() => handleTitleClick(recipe)} />
       ))}
 
       {selectedRecipe && (

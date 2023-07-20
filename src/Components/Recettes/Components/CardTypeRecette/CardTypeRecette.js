@@ -3,21 +3,19 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import React from 'react';
 import PropTypes from 'prop-types';
 import './CardTypeRecette.scss';
-import recette1 from '../../../../Images/recipebaby-1.jpg';
-import recette2 from '../../../../Images/recipebaby-2.jpg';
 import StarRating from '../Etoiles/Etoiles';
 import { Link } from 'react-router-dom';
 
-const CardTypeRecette = ({ isDme }) => {
+const CardTypeRecette = ({ recipe }) => { // Changer isDme par recipe
   return (
     <div className="card-container">
-      <h2>{isDme ? 'DME' : 'PETITS POTS'}</h2>
+      <h2>{recipe.isDme ? 'DME' : 'PETITS POTS'}</h2> 
       <div className="card">
-        <img src={isDme ? recette2 : recette1} className="card-img-top" alt="..." />
+        <img src={recipe.imageUrl} className="card-img-top" alt="..." /> 
         <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <StarRating/>
-          <Link to={isDme ? '/dme' : '/petits-pots'} className="btn btn-primary">
+          <h5 className="card-title">{recipe.title}</h5> 
+          <StarRating rating={recipe.note}/> 
+          <Link to={recipe.isDme ? '/dme' : '/petits-pots'} className="btn btn-primary">
             En savoir +
           </Link>
         </div>
@@ -27,11 +25,7 @@ const CardTypeRecette = ({ isDme }) => {
 };
 
 CardTypeRecette.propTypes = {
-  isDme: PropTypes.bool.isRequired,
+  recipe: PropTypes.object.isRequired, // Changer isDme par recipe
 };
 
 export default CardTypeRecette;
-
-
-
-
