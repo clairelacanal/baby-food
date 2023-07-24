@@ -7,6 +7,7 @@ import StarRating from '../Etoiles/Etoiles';
 import { Link } from 'react-router-dom';
 
 const CardTypeRecette = ({ recipe }) => { // Changer isDme par recipe
+  console.log('Props in CardTypeRecette:', recipe); 
   return (
     <div className="card-container">
       <h2>{recipe.isDme ? 'DME' : 'PETITS POTS'}</h2> 

@@ -21,16 +21,18 @@ function RecipeList() {
 
   return (
     <div>
-    <CardTypeRecette recipe={true} />
-    <CardTypeRecette recipe={false} />
-      
+    <CardTypeRecette recipe={{ isDme: true, title: "Test", imageUrl: "http://example.com/image.jpg", note: 5, tempsPreparation: 10,  tempsCuisson: 45, temperature: 180, age: 6, ingredients: ["banane","chocolat"], enonce: "je coupe la banane"}} />
+
     {recipes.length > 0 && recipes.map(recipe => (
-    <CardTypeRecette key={recipe._id} recipe={recipe} onClick={() => handleTitleClick(recipe)} />
-      ))}
+    recipe && <CardTypeRecette key={recipe._id} recipe={recipe} onClick={() => handleTitleClick(recipe)} />
+    ))}
+
 
       {selectedRecipe && (
         <div>
           <h2>{selectedRecipe.title}</h2>
+          <p>{selectedRecipe.imageUrl}</p>
+          <p>{selectedRecipe.note}</p>
           {/* Affichez les autres détails de la recette ici */}
         </div>
       )}

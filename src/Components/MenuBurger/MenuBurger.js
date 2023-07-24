@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import MenuBurger from './MenuBurger.scss';
+import './MenuBurger.scss';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
