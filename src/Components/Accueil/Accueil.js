@@ -4,7 +4,7 @@ import Profil from '../Profile/Profil';
 import ButtonEcrire from '../Buttons/ButtonEcrireRecette/ButtonRecette';
 import RecipeList from '../Recettes/RecipesList/RecipesList';
 import Navbar from '../Navbar/Navbar';
-import FruitsVegetables from '../Accessoires/FruitsLegumesSaison/FruitsLegumesSaison';
+import FruitsVegetables from '../FruitsLegumesSaison/FruitsLegumesSaison';
 import Accessories from '../Accessoires/Accessoires';
 import Footer from '../Footer/Footer';
 

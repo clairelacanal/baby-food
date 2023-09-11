@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import vegetables from '../../../Images/vegetables.jpg';
+import vegetables from '../../Images/vegetables.jpg';
 import './FruitsLegumesSaison.scss';  // Ajoutez cette ligne pour importer les styles SCSS
 
 const FruitsVegetables = () => {
