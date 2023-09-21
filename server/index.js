@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const authRoutes = require('./routes/authRoutes');
-const connectDB = require('../config/database'); // ajustez le chemin en fonction de l'emplacement de votre fichier database.js
+const connectDB = require('../config/database') // ajustez le chemin en fonction de l'emplacement de votre fichier database.js
 const recipeRoutes = require('../routes/recipeRoutes');
 
 const app = express();
@@ -11,9 +11,7 @@ const app = express();
 connectDB();
 
 app.use(cors());
-app.use(bodyParser.json());
-
-connectDB();
+app.use(express.json());
 
 app.use('/auth', authRoutes);
 app.use('/', recipeRoutes);

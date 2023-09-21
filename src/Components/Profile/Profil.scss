@@ -1,6 +1,7 @@
 .container {
     background-color: #E9EDC9;
     margin-top: 40px;
+    min-height: 100%;
 
     ul {
         width: 90%;
@@ -39,12 +40,13 @@
         }
 
         .collection-item-avatar {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin-top: 1em;
-            margin-left: 3em;
 
             .icon-avatar {
                 color: #F79D65;
@@ -58,7 +60,7 @@
             }
 
             li {
-                padding-bottom: 1em; 
+                padding-bottom: 3em; 
             }
 
             .link-without-style {

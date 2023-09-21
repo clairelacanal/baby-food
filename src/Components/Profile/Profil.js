@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom'; // N'oubliez pas d'importer Link
+import ButtonEcrire from "../Buttons/ButtonEcrireRecette/ButtonRecette";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faSpoon, faUsers } from '@fortawesome/free-solid-svg-icons';
 import 'materialize-css/dist/css/materialize.min.css';
@@ -16,6 +17,7 @@ const Profil = () => {
                     <span className="title">John Doe</span>
                     <br/>
                     <span className="bienvenue">Bienvenue sur votre profil</span>
+                    <ButtonEcrire/>
                 </div>
             </div>
             <div className="collection-item-avatar">

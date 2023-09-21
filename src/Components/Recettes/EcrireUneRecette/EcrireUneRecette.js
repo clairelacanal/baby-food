@@ -93,7 +93,7 @@ class EcrireUneRecette extends Component {
             <input type="text" onChange={(e) => this.handleArrayChange(e, i, 'tasks')} className='form-input' placeholder='Une tâche' />
           </label>
         ))}
-        <input type="submit" value="Validez" />
+        <input type="submit" value="Validez" className='button-validate' />
       </form>
     );
   }
