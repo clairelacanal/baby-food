@@ -11,7 +11,7 @@ class EcrireUneRecette extends Component {
       prepTime: '',
       cookTime: '',
       childAge: '',
-      ingredients: ['', '', ''],
+      ingredients: [],
       tasks: ['', '', ''],
     };
   }
@@ -36,6 +36,26 @@ class EcrireUneRecette extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+  }
+
+  handleArrayChange = (event, index, arrayName) => {
+    const newArray = [...this.state[arrayName]];
+    newArray[index] = event.target.value;
+    this.setState({
+      [arrayName]: newArray,
+    });
+  }
+
+  handleAddIngredient = () => {
+    this.setState(prevState => ({
+      ingredients: [...prevState.ingredients, ''],
+    }));
+  }
+
+  handleRemoveIngredient = (index) => {
+    const newIngredients = [...this.state.ingredients];
+    newIngredients.splice(index, 1);
+    this.setState({ ingredients: newIngredients });
   }
 
   render() {
@@ -81,12 +101,26 @@ class EcrireUneRecette extends Component {
         <label className='form-label'>
           <input type="text" name="childAge" onChange={this.handleInputChange} className='form-input' placeholder="L'âge de l'enfant"/>
         </label>
-        {['Ingrédient 1'].map((label, i) => (
-          <label key={i} className='form-label'>
-            {label}:
-            <input type="text" onChange={(e) => this.handleArrayChange(e, i, 'ingredients')} className='form-input' placeholder='Un ingrédient' />
+        {this.state.ingredients.map((ingredient, i) => (
+        <div key={i} className='ingredient-container'>
+          <label className='form-label'>
+            Ingrédient {i + 1}:
+            <input 
+              type="text"
+              value={ingredient}
+              onChange={(e) => this.handleArrayChange(e, i, 'ingredients')} 
+              className='form-input' 
+              placeholder='Un ingrédient' 
+            />
           </label>
-        ))}
+            <button type="button" onClick={() => this.handleRemoveIngredient(i)}>
+              Supprimer
+            </button>
+        </div>
+      ))}
+      <button type="button" onClick={this.handleAddIngredient}>
+        Ajouter un ingrédient
+      </button>
         {['Tâche 1'].map((label, i) => (
           <label key={i} className='form-label'>
             {label}:
