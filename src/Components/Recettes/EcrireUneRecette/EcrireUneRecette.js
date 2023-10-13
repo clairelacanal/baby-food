@@ -15,7 +15,7 @@ class EcrireUneRecette extends Component {
       prepTime: '',
       cookTime: '',
       childAge: '',
-      ingredients: [],
+      ingredients: [''],
       tasks: [''],
     };
   }
@@ -141,9 +141,7 @@ class EcrireUneRecette extends Component {
       
       {this.state.tasks.map((task, i) => (
       <div key={i} className='task-container'>
-      <FontAwesomeIcon icon={faSquarePlus} className="icon-plus" onClick={this.handleAddTask}/>
         <label className='form-label'>
-          Tâche {i + 1}:
           <input 
           type="text"
           value={task}
@@ -157,6 +155,7 @@ class EcrireUneRecette extends Component {
         </div>
       </div>
 ))}
+      <FontAwesomeIcon icon={faSquarePlus} className="icon-plus" onClick={this.handleAddTask}/>
       <input type="submit" value="Validez" className='button-validate' />
       </form>
     );
