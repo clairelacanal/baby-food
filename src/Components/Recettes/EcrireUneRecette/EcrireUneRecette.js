@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import './EcrireUneRecette.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquarePlus } from '@fortawesome/free-solid-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+
 
 class EcrireUneRecette extends Component {
   constructor(props) {
@@ -12,7 +16,7 @@ class EcrireUneRecette extends Component {
       cookTime: '',
       childAge: '',
       ingredients: [],
-      tasks: ['', '', ''],
+      tasks: [''],
     };
   }
 
@@ -57,6 +61,21 @@ class EcrireUneRecette extends Component {
     newIngredients.splice(index, 1);
     this.setState({ ingredients: newIngredients });
   }
+
+  handleAddTask = () => {
+    this.setState(prevState => ({
+      tasks: [...prevState.tasks, ''],
+    }));
+  }
+  
+  handleRemoveTask = (index) => {
+    this.setState(prevState => {
+      const newTasks = [...prevState.tasks];
+      newTasks.splice(index, 1);
+      return { tasks: newTasks };
+    });
+  }
+  
 
   render() {
     return (
@@ -104,30 +123,41 @@ class EcrireUneRecette extends Component {
         {this.state.ingredients.map((ingredient, i) => (
         <div key={i} className='ingredient-container'>
           <label className='form-label'>
-            Ingrédient {i + 1}:
             <input 
               type="text"
               value={ingredient}
               onChange={(e) => this.handleArrayChange(e, i, 'ingredients')} 
               className='form-input' 
-              placeholder='Un ingrédient' 
+              placeholder='Ajouter un ingrédient' 
             />
           </label>
-            <button type="button" onClick={() => this.handleRemoveIngredient(i)}>
-              Supprimer
-            </button>
+            <div className='icon'>
+              <FontAwesomeIcon icon={faTrash} className='trash' onClick={() => this.handleRemoveIngredient(i)} />
+            </div>           
         </div>
       ))}
-      <button type="button" onClick={this.handleAddIngredient}>
-        Ajouter un ingrédient
-      </button>
-        {['Tâche 1'].map((label, i) => (
-          <label key={i} className='form-label'>
-            {label}:
-            <input type="text" onChange={(e) => this.handleArrayChange(e, i, 'tasks')} className='form-input' placeholder='Une tâche' />
-          </label>
-        ))}
-        <input type="submit" value="Validez" className='button-validate' />
+      <FontAwesomeIcon icon={faSquarePlus} className="icon-plus" onClick={this.handleAddIngredient}/>
+      
+      
+      {this.state.tasks.map((task, i) => (
+      <div key={i} className='task-container'>
+      <FontAwesomeIcon icon={faSquarePlus} className="icon-plus" onClick={this.handleAddTask}/>
+        <label className='form-label'>
+          Tâche {i + 1}:
+          <input 
+          type="text"
+          value={task}
+          onChange={(e) => this.handleArrayChange(e, i, 'tasks')} 
+          className='form-input' 
+          placeholder='Ajouter une tâche' 
+        />
+        </label>
+        <div className='icon'>
+          <FontAwesomeIcon icon={faTrash} className='trash' onClick={() => this.handleRemoveTask(i)} />
+        </div>
+      </div>
+))}
+      <input type="submit" value="Validez" className='button-validate' />
       </form>
     );
   }
