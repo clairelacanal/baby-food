@@ -7,7 +7,7 @@ function RecipeList() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/')
+    axios.get('http://localhost:5000/recipes')
       .then(response => {
         console.log(response.data); // ajouter cette ligne
         setRecipes(response.data);

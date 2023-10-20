@@ -1,36 +1,32 @@
 .card-container {
-    margin: 20px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
 
-    h2 {
-      color: #CCD5AE;
-      font-weight: bold;
-    }
-  
-    .card {
-      width: 13rem;
+.card {
+  width: 13rem;
+}
 
-  
-      .card-body {
-        background-color: #F8EDEB;
-        opacity: 0.9;
-        .card-title {
-          font-size: 18px;
-          color: #333;
-        }
+/* Assurez-vous que les styles de la carte restent inchangés ici */
+.card-body {
+  background-color: #F8EDEB;
+  opacity: 0.9;
+}
+
+.card-title {
+  font-size: 18px;
+  color: #333;
+}
+
+.btn-primary {
+  background-color: #F79D65;
+  border-color: #F79D65;
+}
 
 
-  
-        .btn-primary {
-          background-color:#F79D65 ;
-          border-color: #F79D65;
-        }
-      }
-    }
 /* Styles pour tablette 
 @media (min-width: 768px) {
     form {
@@ -44,6 +40,6 @@
         width: 30%;
     }
 }*/
-}
+
 
   
