@@ -1,8 +1,11 @@
 .burger-menu {
     display: flex;
     justify-content: flex-end;
-    position: relative; /* ou 'absolute', 'fixed', ou 'sticky' */
+    position: fixed; /* ou 'absolute', 'fixed', ou 'sticky' */
     z-index: 1000; 
+    top: 0;
+    right: 0;
+    height: 100vh; /* Hauteur complète de la fenêtre de visualisation */
 
     .burger-icon {
         cursor: pointer;
@@ -18,8 +21,8 @@
 
         .bar {
             width: 2rem;
-            height: 0.25rem;
-            background-color: #FAEDCD;
+            height: 0.15rem;
+            background-color: black;
             transition: all 0.3s linear;
             position: relative;
             transform-origin: 1px;
@@ -52,7 +55,7 @@
         background: #FEC89A;
         width: 70%;
         max-width: 400px;
-        height: 100vh;
+        height: 100%;
         position: fixed; // Passer de 'absolute' à 'fixed' pour prendre tout l'écran
         top: 0;
         right: 0;

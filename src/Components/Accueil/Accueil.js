@@ -8,20 +8,9 @@ import Accessories from '../Accessoires/Accessoires';
 import Footer from '../Footer/Footer';
 
 const Accueil = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleWindowResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleWindowResize);
-
-    // Clean up this component by removing the event listener when the component unmounts
-    return () => window.removeEventListener("resize", handleWindowResize);
-  }, 
-  []);
 
   return (
         <div>
-            {windowWidth > 768 ? <Navbar /> : <BurgerMenu />}
             <Profil/>
             <RecipeList/>
             <FruitsVegetables/>
