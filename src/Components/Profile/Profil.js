@@ -36,17 +36,20 @@ return (
             <div className="collection-item-avatar">
                 <li>
                     <Link to="/mes-recettes-preferees" className="link-without-style" id="recettes-preferees">
-                        <FontAwesomeIcon icon={faHeart} className="icon-avatar"/>Mes recettes préférées
+                        <FontAwesomeIcon icon={faHeart} className="icon-avatar"/>
+                        <p>Mes recettes préférées</p>
                     </Link>
                 </li>
                 <li>
                     <Link to="/mes-recettes-partagees" className="link-without-style">
-                        <FontAwesomeIcon icon={faUsers} className="icon-avatar"/>Mes recettes partagées
+                        <FontAwesomeIcon icon={faUsers} className="icon-avatar"/>
+                        <p>Mes recettes partagées</p>
                     </Link>
                 </li>
                 <li>
                     <Link to="/mes-aliments-testes" className="link-without-style" id="aliments-testes">
-                        <FontAwesomeIcon icon={faSpoon} className="icon-avatar"/>Mes aliments testés
+                        <FontAwesomeIcon icon={faSpoon} className="icon-avatar"/>
+                        <p>Mes aliments testés</p>
                     </Link>
                 </li>
             </div>

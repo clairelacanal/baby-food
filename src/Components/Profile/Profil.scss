@@ -1,83 +1,91 @@
-.container {
-    background-color: #E9EDC9;
-    height: 100%;
-
-    ul {
-        width: 90%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 30px;
-
-        .container-avatar {
-            display: flex;
-            flex-direction: row;
-
-            .container-name {
-                flex-direction: column;
-
-                .title {
-                    color: #F79D65;
-                    margin-left: 1em;
-                    font-weight: bold;
-                    font-size: 16px;
-                }
+@media only screen and (max-width: 768px) {
+    .container {
+        background-color: #E9EDC9;
+        min-height: 100vh;
     
-                .bienvenue {
-                    margin-left: 1em;
-                    color: #495057;
-                    font-weight: 600;
-                }
-
-            }
-    
-            .circle {
-                background-color: #F79D65;
-                width: 60px;
-                height: 60px;
-            }
-        }
-
-        .collection-item-avatar {
+        ul {
+            width: 90%;
+            display: block;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 50px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            .icon-avatar {
-                color: #F79D65;
-                font-size: 20px;
-                margin-right: 5px;
-            }
+            margin-top: 30px;
+    
+            .container-avatar {
+                display: flex;
+                flex-direction: row;
+    
+                .container-name {
+                    flex-direction: column;
+    
+                    .title {
+                        color: #F79D65;
+                        margin-left: 1em;
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
         
-            .collection-item-avatar li {
-                color: #495057;
-                font-weight: 400;
-            }
-
-            li {
-                padding-bottom: 3em; 
-            }
-
-            .link-without-style {
-                text-decoration: none;
-                color: #495057;
-            }
-
-            #recettes-preferees {
-                margin-left: 0.4em;
-            }
-
-            #aliments-testes {
-                margin-right: 1.3em;
-            }
-
-        }       
+                    .bienvenue {
+                        margin-left: 1em;
+                        color: #495057;
+                        font-weight: 600;
+                    }
+    
+                }
         
-    }
+                .circle {
+                    background-color: #F79D65;
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+    
+            .collection-item-avatar {
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            
+                .icon-avatar {
+                    color: #F79D65;
+                    font-size: 20px;
+                }
+            
+                li {
+                    color: #495057;
+                    font-weight: 400;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 3em; /* Espace uniforme entre les éléments */
+                    margin: 0; /* Réinitialiser les marges par défaut */
+                    padding: 0; /* Réinitialiser les paddings par défaut */
+                }
+            
+                .link-without-style {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-decoration: none;
+                    color: #495057;
+                    gap: 10px; /* Espace entre l'icône et le texte */
+                }
+            }
+            }
+            
+                
+    
+            }       
+            
+        }
+    
+
+
+
+
 /* Styles pour tablette 
 @media (min-width: 768px) {
     form {
@@ -91,4 +99,4 @@
         width: 30%;
     }
 }*/
-}
+
