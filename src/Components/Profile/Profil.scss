@@ -2,13 +2,15 @@
     .container {
         background-color: #E9EDC9;
         min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     
         ul {
             width: 90%;
             display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 30px;
+            margin: auto;
     
             .container-avatar {
                 display: flex;
@@ -21,13 +23,13 @@
                         color: #F79D65;
                         margin-left: 1em;
                         font-weight: bold;
-                        font-size: 16px;
                     }
         
                     .bienvenue {
-                        margin-left: 1em;
+                        margin-left: 1.5em;
                         color: #495057;
                         font-weight: 600;
+                        font-size: 16px;
                     }
     
                 }
@@ -60,7 +62,7 @@
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                    margin-bottom: 3em; /* Espace uniforme entre les éléments */
+                    margin-bottom: 8em; /* Espace uniforme entre les éléments */
                     margin: 0; /* Réinitialiser les marges par défaut */
                     padding: 0; /* Réinitialiser les paddings par défaut */
                 }

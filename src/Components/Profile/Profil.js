@@ -27,9 +27,9 @@ return (
             <div className="container-avatar">
                 <div className="circle"></div>
                 <div className="container-name">
-                    <span className="title">John Doe</span>
-                    <br/>
-                    <span className="bienvenue">Bienvenue sur votre profil</span>
+                    <h1><span className="title">John Doe</span></h1>
+                    
+                    <h2><span className="bienvenue">Bienvenue sur votre profil</span></h2>
                     <ButtonEcrire/>
                 </div>
             </div>
