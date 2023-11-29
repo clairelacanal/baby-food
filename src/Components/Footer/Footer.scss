@@ -1,3 +1,70 @@
+/* Style de base pour le footer */
+.bg-dark {
+    --bs-bg-opacity: 0;
+}
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  }
+  
+.container-footer {
+    background-color: #343a40;
+    color: #fff; 
+    padding: 20px 0;
+  }
+  
+  /* Style pour les titres dans le footer */
+  .footer h5 {
+    color: #ffd700; 
+    margin-bottom: 15px; 
+  }
+  
+  /* Style pour le texte et les liens */
+  .footer p, .footer a {
+    font-size: 14px; /* Taille de police adaptée aux mobiles */
+    color: #fff; /* Assure que tous les textes et liens sont blancs */
+  }
+  
+  .footer a {
+    text-decoration: none; 
+    color: #ffd700; 
+  }
+  
+  .footer a:hover {
+    color: #ffffff; 
+  }
+  
+  /* Style pour le formulaire d'inscription à la newsletter */
+  .footer form {
+    margin-top: 15px; /* Espacement au-dessus du formulaire */
+  }
+  
+  .footer input[type="email"] {
+    margin-bottom: 10px; /* Espacement après le champ de saisie */
+  }
+  
+  /* Responsive design pour les appareils mobiles */
+  @media (max-width: 768px) {
+    .footer .row {
+      text-align: center; 
+    }
+  
+    .footer .col-md-3 {
+      margin-bottom: 20px; 
+    }
+  }
+  
+  /* Style pour le texte de copyright */
+  .footer .col.text-center p {
+    font-size: 12px; 
+  }
+  
+
+
 /* Styles pour tablette 
 @media (min-width: 768px) {
     form {
