@@ -14,22 +14,31 @@
     
             .container-avatar {
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 2em;
     
                 .container-name {
+                    display: flex; 
                     flex-direction: column;
+                    align-items: center; 
     
                     .title {
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
                         color: #F79D65;
-                        margin-left: 1em;
+                        align-content: center;
                         font-weight: bold;
+                        margin-bottom: 0;
                     }
         
                     .bienvenue {
-                        margin-left: 1.5em;
                         color: #495057;
                         font-weight: 600;
-                        font-size: 16px;
+                        font-size: 14px;
+                        padding: 0;
                     }
     
                 }
@@ -38,6 +47,7 @@
                     background-color: #F79D65;
                     width: 60px;
                     height: 60px;
+                    margin-bottom: 0.5em;
                 }
             }
     
@@ -62,8 +72,7 @@
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                    margin-bottom: 8em; /* Espace uniforme entre les éléments */
-                    margin: 0; /* Réinitialiser les marges par défaut */
+                    margin-bottom: 2em; /* Espace uniforme entre les éléments */
                     padding: 0; /* Réinitialiser les paddings par défaut */
                 }
             
@@ -74,6 +83,10 @@
                     text-decoration: none;
                     color: #495057;
                     gap: 10px; /* Espace entre l'icône et le texte */
+                }
+
+                li p {
+                    font-size: 18px;
                 }
             }
             }
