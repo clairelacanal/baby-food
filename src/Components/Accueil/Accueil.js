@@ -7,6 +7,7 @@ import FruitsVegetables from '../FruitsLegumesSaison/FruitsLegumesSaison';
 import Accessories from '../Accessoires/Accessoires';
 import Footer from '../Footer/Footer';
 
+
 const Accueil = () => {
 
   return (

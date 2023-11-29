@@ -6,7 +6,7 @@ import './Accessoires.scss';
 
 const Accessories = () => {
   return (
-    <div className="card text-bg-dark">
+    <div className="card bg-light">
       <img src={image} className="card-img" alt="..." />
       <div className="card-img-overlay">
         <h5 className="card-title">Les accessoires de cuisine</h5>

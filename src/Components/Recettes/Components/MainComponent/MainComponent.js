@@ -7,10 +7,10 @@ import PropTypes from 'prop-types'; // Importez PropTypes
 const MainComponent = ({ recipes }) => {
   return (
     <div className="main-container">
-      <h2>Petits Pots</h2>
+      <h2>Les nouvelles recettes de petits pots</h2>
       <PetitsPotsRow recipes={recipes} />
 
-      <h2>DME</h2>
+      <h2>Les nouvelles recettes de DME</h2>
       <DmeRow recipes={recipes} />
     </div>
   );
